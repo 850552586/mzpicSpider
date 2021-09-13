@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: 3.7
 
-		- name: Install requirements
+    - name: Install requirements
       run: pip install -r requirements.txt
     
     - name: spider go
