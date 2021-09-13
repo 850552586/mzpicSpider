@@ -16,8 +16,10 @@ jobs:
       with:
         python-version: 3.7
 
-    - name: Install requirements
-      run: pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: spider go
       run: |
