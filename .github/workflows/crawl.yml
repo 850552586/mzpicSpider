@@ -34,7 +34,7 @@ jobs:
         git config --global user.email "850552586@qq.com"
         git add result/
         git commit -m 'upload zhihupic result'
-        git push -u origin master
+        git push -u origin main
         
     - name: Failure test
       if: failure()
