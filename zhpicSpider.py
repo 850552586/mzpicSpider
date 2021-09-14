@@ -26,8 +26,8 @@ title = "穿 JK 制服上街是什么体验？"
 
 #爬取头像存放根目录
 save_path = os.path.join(result_path,title)
-
-shutil.rmtree(save_path)
+if os.path.isdir(save_path):
+    shutil.rmtree(save_path)
 
 pattern = re.compile('''<img\s.*?\s?data-original\s*=\s*['|"]?([^\s'"]+).*?>''')
 while answer_startnum<answers_num:
