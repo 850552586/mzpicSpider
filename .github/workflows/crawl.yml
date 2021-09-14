@@ -27,5 +27,19 @@ jobs:
     
     - name : list file of curdir
       run: ls
-    
+
+    - name: push to this repo
+      run: |
+        git config --global user.name "Ericam"
+        git config --global user.email "850552586@qq.com"
+        git add result/ && echo A
+        git commit -m 'upload zhihupic result' && echo B
+        git push -u origin master && echo C
+        
+    - name: Failure test
+      if: failure()
+      run: | 
+        ls
+        echo 55555  
+
     
