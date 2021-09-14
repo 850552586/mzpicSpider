@@ -24,3 +24,8 @@ jobs:
     - name: spider go
       run: |
         python zhpicSpider.py
+    
+    - name : list file of curdir
+      run: ls
+    
+    

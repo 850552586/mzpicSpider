@@ -16,8 +16,15 @@ answers_num = 10
 answer_startnum = 0
 #排序方式
 sorted_choi = 'default' #按时间排序则修改为updated
+
+# 结果存放根目录
+result_path = "./result"
+
+#问题title
+title = "穿 JK 制服上街是什么体验？"
+
 #爬取头像存放根目录
-save_path = './穿 JK 制服上街是什么体验？/'
+save_path = os.path.join(result_path,title)
 
 pattern = re.compile('''<img\s.*?\s?data-original\s*=\s*['|"]?([^\s'"]+).*?>''')
 while answer_startnum<answers_num:
