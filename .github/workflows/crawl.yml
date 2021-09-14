@@ -32,9 +32,9 @@ jobs:
       run: |
         git config --global user.name "Ericam"
         git config --global user.email "850552586@qq.com"
-        git add result/ && echo A
-        git commit -m 'upload zhihupic result' && echo B
-        git push -u origin master && echo C
+        git add result/
+        git commit -m 'upload zhihupic result'
+        git push -u origin master
         
     - name: Failure test
       if: failure()
